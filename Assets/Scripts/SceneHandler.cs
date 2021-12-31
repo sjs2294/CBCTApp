@@ -36,9 +36,12 @@ public class SceneHandler : MonoBehaviour
     /// Reference to the FlipCamera script attached to the cameras.
     public FlipCamera flipScript;
 
+    /// The XRay model of the head
     public GameObject XRayHead;
 
+    /// The preview button controlling visibility 
     public Button preview; 
+    /// Boolean to indicate if preview currently visible
     private bool show = true; 
 
     // Start is called before the first frame update
@@ -49,6 +52,7 @@ public class SceneHandler : MonoBehaviour
         btn.onClick.AddListener(ChangeMode);
     }
 
+    // This function toggles whether the preview is visible
      private void ChangeMode() 
     {
         if (show) {
@@ -64,6 +68,8 @@ public class SceneHandler : MonoBehaviour
     /// Performs the necessary actions to set the UI as the main page. It sets the xRayButtonCanvas
     /// to be true and the other buttons to be false. The viewport of the three cameras and their depths are 
     /// adjusted to show the UI cameras as the big screen and the others as the small overlayed screen.
+    /// Deactivates scaling and tranlsation of XRay head in preview and sets visibility of preview to previous
+    /// state. 
     ///
     public void SetUIAsMainPage()
     {
@@ -91,7 +97,9 @@ public class SceneHandler : MonoBehaviour
         mainCam.depth = 0;
         xRayCam.depth = 2;
 
+        // set visibility to what is was before main page was entered
         XRayHead.SetActive(show);
+        // switch off pinch scaling and translating while in selection mode
         XRayHead.GetComponent<Lean.Touch.LeanPinchScale>().enabled = false; 
         XRayHead.GetComponent<Lean.Touch.LeanDragTranslate>().enabled = false; 
     }
@@ -99,6 +107,7 @@ public class SceneHandler : MonoBehaviour
     /// Performs the necessary actions to set the x-ray as the main page. It sets the xRayButtonCanvas
     /// to be false and the other buttons to be true. The viewport of the three cameras and their depths are 
     /// adjusted to show the xRay camera as the big screen and the others as the small overlayed screen.
+    /// Activates scaling and translation of XRay head and ensures the model is visible. 
     ///
     public void SetXRayAsMainPage()
     {
@@ -125,7 +134,9 @@ public class SceneHandler : MonoBehaviour
         mainCam.depth = 2;
         xRayCam.depth = 0;
 
+        // make sure xRay head is visible
         XRayHead.SetActive(true); 
+        // activate pinch scaling and drag translate to manipulate head
         XRayHead.GetComponent<Lean.Touch.LeanPinchScale>().enabled = true; 
         XRayHead.GetComponent<Lean.Touch.LeanDragTranslate>().enabled = true; 
     }

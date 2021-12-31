@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+  /// This function sets the alpha value of the input material based on a slider's value
 public class ModelTransparency : MonoBehaviour
 {
-   // Start is called before the first frame update
 
+
+    /// The material whose transparency is being changed 
     public Material mat; 
+
+    /// defualt value for transparency
     public float alpha = 0.15f; 
+
+    /// The slider controlling the alpha value
     public Slider slider;
 
     void Start()

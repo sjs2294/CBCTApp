@@ -1,0 +1,82 @@
+\hypertarget{class_scene_handler}{}\doxysection{Scene\+Handler Class Reference}
+\label{class_scene_handler}\index{SceneHandler@{SceneHandler}}
+
+
+\mbox{\hyperlink{class_scene_handler}{Scene\+Handler}} is in charge of handling the necessary changes to go from the UI to the x-\/ray result and vise versa.  
+
+
+Inheritance diagram for Scene\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scene_handler_a8d1ae1671143a590d37c8a1b5cbf0186}{Set\+UIAs\+Main\+Page}} ()
+\item 
+void \mbox{\hyperlink{class_scene_handler_ab765231c9f0d3b956cd4291557806fd2}{Set\+XRay\+As\+Main\+Page}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_handler_afe826b082799c807c558bd3fe9197703}\label{class_scene_handler_afe826b082799c807c558bd3fe9197703}} 
+Camera {\bfseries x\+Ray\+Cam}
+\begin{DoxyCompactList}\small\item\em The camera capturing the x-\/ray head. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_handler_a8ef1b858b19bb36707ed5f45bb862aca}\label{class_scene_handler_a8ef1b858b19bb36707ed5f45bb862aca}} 
+Camera {\bfseries main\+Cam}
+\begin{DoxyCompactList}\small\item\em The camera capturing the front view of the head. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_handler_a677ca8185c782f8e25dd272e9875387d}\label{class_scene_handler_a677ca8185c782f8e25dd272e9875387d}} 
+Camera {\bfseries side\+Cam}
+\begin{DoxyCompactList}\small\item\em The camera capturing the side view of the head. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_handler_a799854fd989a79a9215960c26cf31e6b}\label{class_scene_handler_a799854fd989a79a9215960c26cf31e6b}} 
+Game\+Object {\bfseries x\+Ray\+Button\+Canvas}
+\begin{DoxyCompactList}\small\item\em This button is overlayed on top of the mini view on the bottom right when the UI page is loaded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_handler_a0776102bd31d56e4d67f43655b67c274}\label{class_scene_handler_a0776102bd31d56e4d67f43655b67c274}} 
+Game\+Object {\bfseries main\+Button\+Canvas}
+\begin{DoxyCompactList}\small\item\em This button is overlayed on the left half of the mini view on the bottom right when the x-\/ray page is loaded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_handler_a378d52a7a27dbef98e1f94a0d6c8d1b1}\label{class_scene_handler_a378d52a7a27dbef98e1f94a0d6c8d1b1}} 
+Game\+Object {\bfseries side\+Button\+Canvas}
+\begin{DoxyCompactList}\small\item\em This button is overlayed on the right half of the mini view on the bottom right when the x-\/ray page is loaded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_handler_a7e3732c36931690267c57ee89cba7325}\label{class_scene_handler_a7e3732c36931690267c57ee89cba7325}} 
+Game\+Object {\bfseries ARButton}
+\begin{DoxyCompactList}\small\item\em Button to change into and out of AR mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_handler_a663a79f7a288cd58babcfb26dc79cadc}\label{class_scene_handler_a663a79f7a288cd58babcfb26dc79cadc}} 
+\mbox{\hyperlink{class_flip_camera}{Flip\+Camera}} {\bfseries flip\+Script}
+\begin{DoxyCompactList}\small\item\em Reference to the \mbox{\hyperlink{class_flip_camera}{Flip\+Camera}} script attached to the cameras. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_handler_a6a179dabffb102d641f5217c7c9efde2}\label{class_scene_handler_a6a179dabffb102d641f5217c7c9efde2}} 
+Game\+Object {\bfseries XRay\+Head}
+\begin{DoxyCompactList}\small\item\em The XRay model of the head. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_handler_a36a6786bebf9fb09819711a2fc76a817}\label{class_scene_handler_a36a6786bebf9fb09819711a2fc76a817}} 
+Button {\bfseries preview}
+\begin{DoxyCompactList}\small\item\em The preview button controlling visibility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_handler_a24efe58f87ec3ed014b20a29483f852a}\label{class_scene_handler_a24efe58f87ec3ed014b20a29483f852a}} 
+static bool {\bfseries is\+XRay}
+\begin{DoxyCompactList}\small\item\em True if the x-\/ray scene is loaded. False if the UI scene is loaded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_scene_handler}{Scene\+Handler}} is in charge of handling the necessary changes to go from the UI to the x-\/ray result and vise versa. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_handler_a8d1ae1671143a590d37c8a1b5cbf0186}\label{class_scene_handler_a8d1ae1671143a590d37c8a1b5cbf0186}} 
+\index{SceneHandler@{SceneHandler}!SetUIAsMainPage@{SetUIAsMainPage}}
+\index{SetUIAsMainPage@{SetUIAsMainPage}!SceneHandler@{SceneHandler}}
+\doxysubsubsection{\texorpdfstring{SetUIAsMainPage()}{SetUIAsMainPage()}}
+{\footnotesize\ttfamily void Scene\+Handler.\+Set\+UIAs\+Main\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Performs the necessary actions to set the UI as the main page. It sets the x\+Ray\+Button\+Canvas to be true and the other buttons to be false. The viewport of the three cameras and their depths are adjusted to show the UI cameras as the big screen and the others as the small overlayed screen. Deactivates scaling and tranlsation of XRay head in preview and sets visibility of preview to previous state. \mbox{\Hypertarget{class_scene_handler_ab765231c9f0d3b956cd4291557806fd2}\label{class_scene_handler_ab765231c9f0d3b956cd4291557806fd2}} 
+\index{SceneHandler@{SceneHandler}!SetXRayAsMainPage@{SetXRayAsMainPage}}
+\index{SetXRayAsMainPage@{SetXRayAsMainPage}!SceneHandler@{SceneHandler}}
+\doxysubsubsection{\texorpdfstring{SetXRayAsMainPage()}{SetXRayAsMainPage()}}
+{\footnotesize\ttfamily void Scene\+Handler.\+Set\+XRay\+As\+Main\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Performs the necessary actions to set the x-\/ray as the main page. It sets the x\+Ray\+Button\+Canvas to be false and the other buttons to be true. The viewport of the three cameras and their depths are adjusted to show the x\+Ray camera as the big screen and the others as the small overlayed screen. Activates scaling and translation of XRay head and ensures the model is visible. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/sophie/\+Documents/\+Git\+Hub/\+CBCTApp/\+Assets/\+Scripts/Scene\+Handler.\+cs\end{DoxyCompactItemize}
